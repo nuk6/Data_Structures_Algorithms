@@ -20,7 +20,7 @@ int query(int x, int y) {
 	for(int i = x; i; i -= (i&-i)) {
 		val1 += bit[i];
 	} 
-	for(int i = y; i; i -= (i&-i)) {
+	for(int i = y+1; i; i -= (i&-i)) {
 		val2 += bit[i];
 	} 
 	return val2 - val1;
@@ -29,5 +29,5 @@ int query(int x, int y) {
 int main() {
 	vector<int> a{1,2,-1,5,2};
 	build(a);
-	cout << query(2,4);
+	cout << query(2,4); // 6
 }
