@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+using cvi = const vector<int>&;
 const int MX = 20007;
 int bit[MX];
 
@@ -26,7 +27,7 @@ int query(int x, int y) {
 }
 
 int main() {
-	vector<int> a{1,2,-1,5,5};
+	vector<int> a{1,2,-1,5,2};
 	build(a);
 	cout << query(2,4);
 }
